@@ -1,25 +1,26 @@
 // Set your brand colors
-$purple: #8a4d76;
-$pink: #fa7c91;
-$brown: #757763;
 $beige-light: #d0d1cd;
-$beige-lighter: #eff0eb;
+$beige-lighter: #f4f6fa;
 $white: #ffff;
+$polo-blue: #89a6ce;
+$steel-blue: #4875b3;
+$solitude: #f4f6fa;
+$periwinkle: #c2cfe5;
+$border-radius: 4px;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Nunito', sans-serif;
-$grey-dark: $brown;
+$grey-dark: $steel-blue;
 $grey-light: $beige-light;
-$primary: $purple;
-$link: $pink;
+$primary: $steel-blue;
+$link: $polo-blue;
 $widescreen-enabled: false;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;
 $control-border-width: 2px;
-$input-border-color: transparent;
+$input-border-color: $beige-light;
 $input-shadow: none;
 $border-bottom: 1px solid gray;
 $table-cell-padding: 0.5em 0.75em;
-// $table-row-hover-background-color: green;

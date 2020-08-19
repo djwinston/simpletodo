@@ -3,10 +3,10 @@
     <div class="container">
       <div class="table-wrapper">
         <div class="columns todo-input">
-          <div class="column is-11">
+          <div class="column is-10">
             <input class="input" type="text" placeholder="Add new task" v-model="input" autofocus />
           </div>
-          <div class="column is-1">
+          <div class="column is-2">
             <button class="button is-primary is-fullwidth" @click="inputHandler" :disabled="!input">Add</button>
           </div>
         </div>
@@ -16,9 +16,9 @@
               <tbody>
                 <tr v-for="item in tableData" :key="item.id" :data-item="item.id">
                   <th>
-                    <label class="checkbox"
-                      ><input v-model="item.isDone" type="checkbox" @click="completeHander"
-                    /></label>
+                    <label class="checkbox">
+                      <input v-model="item.isDone" type="checkbox" @click="completeHander" />
+                    </label>
                   </th>
                   <td class="item-value">{{ item.value }}</td>
                   <td class="item-remove-btn">
@@ -94,12 +94,15 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/styles/variables';
+
 .container {
   padding: 0 20px;
   .table-wrapper {
     border: 1px solid lightgrey;
-    border-radius: 10px;
+    border-radius: $border-radius;
     padding: 12px;
+    background-color: $white;
     .todo-input {
       border-bottom: 1px solid lightgray;
     }
@@ -111,8 +114,6 @@ export default {
         tbody {
           tr {
             .item-remove-btn {
-              display: flex;
-              justify-content: center;
               span {
                 cursor: pointer;
                 opacity: 0;
